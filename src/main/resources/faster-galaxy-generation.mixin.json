@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "de.geolykt.fastgalgen.mixins",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "LandmarkManagerMixins",
+    "LandmarkMixins",
+    "QuadTreeMixins"
+  ]
+}

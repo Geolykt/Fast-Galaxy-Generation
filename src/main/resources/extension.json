@@ -1,8 +1,10 @@
 {
-  "entrypoint": "example.extension.ExampleExtension",
-  "name": "ExampleExtension",
-  "version": "0.0.1-SNAPSHOT",
+  "entrypoint": "de.geolykt.fastgalgen.FastGalaxyGeneration",
+  "name": "FastGalaxyGeneration",
+  "version": "0.1.0",
   "dependencies": [
     "StarloaderAPI"
-  ]
+  ],
+  "mixinConfig": "faster-galaxy-generation.mixin.json",
+  "reversibleAccessSetter": "fastergalaxygen.ras"
 }
