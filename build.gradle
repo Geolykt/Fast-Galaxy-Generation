@@ -1,15 +1,17 @@
-/*buildscript {
+/*
+buildscript {
     configurations.all {
         resolutionStrategy {
-            force 'org.stianloader:micromixin-remapper:0.1.0-a20240504'
+            force 'org.stianloader:micromixin-remapper:0.1.0'
         }
     }
-}*/
+}
+*/
 
 plugins {
     id 'java'
     id 'java-library'
-    id 'gsl-starplane' version '0.2.0-a20240505'
+    id 'gsl-starplane' version '0.2.0-a20240505.2'
     id "com.github.johnrengelman.shadow" version "8.1.1"
 }
 
