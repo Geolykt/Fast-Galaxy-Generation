@@ -13,6 +13,7 @@ plugins {
     id 'java-library'
     id 'gsl-starplane' version '0.2.0-a20240505.2'
     id "com.github.johnrengelman.shadow" version "8.1.1"
+    id 'maven-publish'
 }
 
 group 'de.geolykt'
@@ -139,3 +140,30 @@ jar {
         attributes 'Multi-Release': true
     }
 }
+
+publish {
+    dependsOn publishToMavenLocal // Gradle doesn't quite like this line but otherwise I get issues when publishing so what gives?
+}
+
+publishing {
+    publications {
+        plugin(MavenPublication) { publication ->
+            groupId project.group
+            artifactId project.base.archivesName.get()
+
+            from components['java']
+            artifact remapJar
+        }
+    }
+    repositories {
+        if (System.getProperty('publishRepo') != null) {
+            maven {
+                url System.getProperty('publishRepo')
+                allowInsecureProtocol = true
+            }
+        } else {
+            mavenLocal()
+        }
+    }
+}
+
