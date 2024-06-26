@@ -1,3 +1,7 @@
+This mod has been superseeded by [FastStar](https://github.com/Geolykt/FastStar). All functionality of this mod were merged into FastStar.
+
+===
+
 # Fast Galaxy Generation
 
 Fast galaxy generation is a mod for galimulator 5.0.2 which contains
